@@ -1,0 +1,1243 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello! I'm the Arklex AI Documentation Assistant. How can I assist you with your documentation inquiries today?",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "What specific topic or aspect of the Arklex framework would you like more information on?",
+                    "task": "Inquire about the specific topic or aspect of the Arklex framework the user needs information about.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "default_worker",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Based on the user's input, determine if the inquiry can be handled by FaissRAGWorker for internal documentation or if it requires a real-time search using SearchWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker or SearchWorker"
+                },
+                "attribute": {
+                    "value": "Here is the information regarding the Arklex framework that you requested.",
+                    "task": "Provide the user with detailed information or documentation snippets based on the identified worker's response.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need clarification on any of the information provided, or do you have any further questions?",
+                    "task": "Ask the user if they need clarification on any of the provided information or if they have further questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Are you satisfied with the information provided, or do you need assistance with any related topics?",
+                    "task": "Confirm if the user is satisfied with the information or if they require additional assistance on related topics.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Could you please specify which aspects of the Arklex AI framework you need implementation details about?",
+                    "task": "Ask the user to specify what aspects of the Arklex AI framework they need implementation details about (e.g., setup, configuration, specific features).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Utilize FaissRAGWorker to search for relevant documentation based on the user's specified aspects.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are the implementation details regarding the setup of the Arklex AI framework: [insert details here].",
+                    "task": "Present the retrieved implementation details to the user, ensuring clarity and relevance to their query.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need any further clarification or details on any specific part of the implementation?",
+                    "task": "Inquire if the user requires further clarification or additional details on any specific part of the implementation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have all the information you need, or is there anything else related to the Arklex AI framework I can assist you with?",
+                    "task": "Confirm if the user has all the information they need or if they would like assistance with anything else related to the Arklex AI framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "To use the Arklex AI framework, start by initializing the environment, then load the necessary modules. Follow the guidelines provided in the documentation for specific functionalities.",
+                    "task": "Provide usage instructions for the Arklex AI framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Could you please tell me your experience level with the Arklex AI framework? Are you a beginner, intermediate, or advanced user? Also, what specific use case do you have in mind?",
+                    "task": "Inquire about the user's experience level with the Arklex AI framework (beginner, intermediate, advanced) and their specific use case.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Based on the user's experience level and use case, provide tailored best practices for using the Arklex AI framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "14",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any specific questions about the best practices I just provided, or is there anything that needs clarification?",
+                    "task": "Ask if the user has any specific questions about the best practices provided or if they need clarification on any points.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "15",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you understand the best practices, or do you need any further assistance with implementation or usage?",
+                    "task": "Confirm if the user understands the best practices or needs further assistance with implementation or usage.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "16",
+            {
+                "resource": {
+                    "id": "default_worker",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "If you would like, I can provide additional resources or links to documentation that may help you further. Would you like that?",
+                    "task": "Offer to provide additional resources or documentation links that may help the user further.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "17",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Arklex AI offers features such as natural language processing, machine learning integration, and real-time analytics to enhance user experience.",
+                    "task": "Provide information about core features of Arklex AI.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "18",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Are you familiar with the Arklex AI framework and its general concepts?",
+                    "task": "Inquire if the user is familiar with the Arklex AI framework and its general concepts to gauge their current understanding.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "19",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Task composition in the Arklex AI framework involves defining tasks in terms of inputs, processes, and expected outcomes. Key components include task types, dependencies, and execution parameters.",
+                    "task": "Based on the user's response, provide an overview of task composition within the Arklex AI framework, explaining key concepts and components.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "20",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any specific questions or aspects of task composition you'd like to explore further?",
+                    "task": "Ask the user if they have specific questions or aspects of task composition they would like to explore further.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "21",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "For instance, if a task requires data processing, you might need to specify the input data format and processing algorithms. Would you like to see a specific example?",
+                    "task": "Respond to the user's specific inquiries regarding task composition, providing detailed examples or explanations as needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "22",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need any additional information or assistance on related topics within the Arklex AI framework?",
+                    "task": "Confirm if the user needs additional information or assistance on related topics within the Arklex AI framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "23",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Could you please specify which aspects of human intervention features you are interested in? For example, are you looking for implementation details, usage scenarios, or best practices?",
+                    "task": "Ask the user to specify what particular aspects of human intervention features they are interested in (e.g., implementation, usage scenarios, best practices).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "24",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Retrieve information from the documentation based on the user's specified interests related to human intervention features in Arklex AI.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "25",
+            {
+                "resource": {
+                    "id": "default_worker",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "Here are the key points regarding human intervention features in Arklex AI: 1. Implementation strategies focus on... 2. Common usage scenarios include... 3. Best practices recommend...",
+                    "task": "Provide a summary of the retrieved information about human intervention features, highlighting key points.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "26",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need more detailed information on any specific feature, or do you have any further questions?",
+                    "task": "Ask the user if they need more detailed information on any specific feature or if they have further questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "27",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Are you satisfied with the information provided, or is there anything else related to Arklex AI that you need assistance with?",
+                    "task": "Confirm if the user is satisfied with the information provided or if they require assistance with anything else related to Arklex AI.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "28",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "What specific aspects of continual learning in Arklex AI are you interested in? Are you looking for implementation details, usage instructions, or best practices?",
+                    "task": "Ask the user for their specific interest in continual learning within Arklex AI, such as implementation details, usage instructions, or best practices.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "29",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Continual learning in Arklex AI allows the model to adapt and improve over time by integrating new data without forgetting previously learned information. This process involves incremental learning techniques that can be applied to various applications.",
+                    "task": "Based on the user's response, provide a detailed explanation of continual learning as it pertains to Arklex AI, utilizing the FaissRAGWorker to pull relevant documentation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "30",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need any further clarification on the explanation provided, or do you have additional questions about related topics?",
+                    "task": "Inquire if the user requires further clarification on any part of the explanation provided or if they have additional questions about related topics.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "31",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "If you're interested, I can provide examples or case studies of how continual learning has been successfully implemented in various projects.",
+                    "task": "Offer to provide examples or case studies of continual learning implementations if the user expresses interest.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "32",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have all the information you need, or is there anything else related to Arklex AI documentation that I can assist you with?",
+                    "task": "Confirm if the user has all the information they need or if they would like assistance with anything else related to Arklex AI documentation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "33",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "What specific aspects of mixed control in Arklex AI would you like to know more about?",
+                    "task": "Ask the user to specify what aspects of mixed control in Arklex AI they are interested in (e.g., implementation details, usage instructions, or best practices).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "34",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Based on the user's response, retrieve relevant documentation or information from FaissRAGWorker to provide a detailed answer about mixed control.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "35",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are the details on mixed control in Arklex AI that you requested: [insert detailed information].",
+                    "task": "Deliver the information to the user using MessageWorker, ensuring it is clear and addresses the user's specific interests.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "36",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need any further clarification or information on mixed control or any related topics?",
+                    "task": "Ask the user if they need further clarification or additional information on mixed control or related topics.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "37",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "If you have any more questions, feel free to ask! Otherwise, is there anything else I can assist you with?",
+                    "task": "If the user has further questions, repeat steps 1-3 as necessary; otherwise, confirm if the user needs assistance with anything else.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "38",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Could you please clarify which specific aspects of the task graph structure you are interested in? For example, are you looking for a general overview, specific implementations, or best practices?",
+                    "task": "Ask the user to clarify what specific aspects of the task graph structure they are interested in (e.g., general overview, specific implementations, best practices).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "39",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "The task graph structure consists of nodes that represent tasks and edges that define the relationships between them. Within the Arklex AI framework, these components interact to facilitate efficient task execution and resource management.",
+                    "task": "Based on the user's response, provide an overview of the task graph structure, explaining its components and how they interact within the Arklex AI framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "40",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "To implement the task graph in your projects, you should start by defining your tasks as nodes and determining the dependencies between them. Detailed instructions can be found in our documentation.",
+                    "task": "Offer detailed information on usage instructions, including how to implement the task graph in their projects or workflows.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "41",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like to see some examples or case studies that illustrate how the task graph can be applied in real scenarios?",
+                    "task": "Ask if the user needs examples or case studies to illustrate the task graph's application in real scenarios.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "42",
+            {
+                "resource": {
+                    "id": "default_worker",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "Here are some additional resources and documentation links for further reading: [link1], [link2], [link3]. Let me know if you need more clarification!",
+                    "task": "Provide additional resources or documentation links if the user expresses a desire for further reading or clarification.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "User has a question about documentation",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "1",
+            "2",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "6",
+            {
+                "intent": "User wants implementation details",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "6",
+            "7",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "11",
+            {
+                "intent": "User needs usage instructions",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "12",
+            {
+                "intent": "User is looking for best practices",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "12",
+            "13",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "13",
+            "14",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "14",
+            "15",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "15",
+            "16",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "17",
+            {
+                "intent": "User has a question about core features",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "18",
+            {
+                "intent": "User wants to understand task composition",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "18",
+            "19",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "19",
+            "20",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "20",
+            "21",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "21",
+            "22",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "23",
+            {
+                "intent": "User needs information about human intervention",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "23",
+            "24",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "24",
+            "25",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "25",
+            "26",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "28",
+            {
+                "intent": "User seeks information on continual learning",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "28",
+            "29",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "29",
+            "30",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "30",
+            "31",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "31",
+            "32",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "33",
+            {
+                "intent": "User wants to learn about mixed control",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "33",
+            "34",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "34",
+            "35",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "35",
+            "36",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "36",
+            "37",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "38",
+            {
+                "intent": "User has questions about the task graph",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "38",
+            "39",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "39",
+            "40",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "40",
+            "41",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "41",
+            "42",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "Arklex AI Documentation Assistant",
+    "user_objective": "The Arklex AI Documentation Assistant helps users inquiries about documentation. It can provide information about implementation details, usage instructions, and best practices on Arklex framework.",
+    "builder_objective": "The Arklex AI Documentation Assistant encourages users to explore advanced features, follow best practices, and adopt efficient implementation strategies within the Arklex framework. It also guides users toward community resources (Discord) and Blogs.",
+    "domain": "Software Documentation",
+    "intro": "Arklex AI is an advanced AI agent framework that balances autonomy and control for intelligent, efficient, and adaptable automation.",
+    "task_docs": [
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/",
+            "desc": "technical documentation and guides for the Arklex AI framework",
+            "num": 15
+        }
+    ],
+    "rag_docs": [
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/",
+            "desc": "technical documentation and guides for the Arklex AI framework",
+            "num": 15
+        }
+    ],
+    "tasks": [],
+    "workers": [
+        {
+            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+            "name": "FaissRAGWorker",
+            "path": "faiss_rag_worker.py"
+        },
+        {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "9c15af81-04b3-443e-be04-a3522124b905",
+            "name": "SearchWorker",
+            "path": "search_worker.py"
+        },
+        {
+            "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
+        }
+    ],
+    "tools": [],
+    "nluapi": "",
+    "slotfillapi": ""
+}

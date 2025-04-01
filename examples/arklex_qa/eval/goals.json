@@ -1,0 +1,7 @@
+[
+    "I want to ask the chatbot how to effectively integrate the Arklex AI Agent Framework into my existing systems and what best practices I should follow for optimal performance.",
+    "I want to understand how the MessageState structure works in practice and see examples of how it is used in different scenarios within the Arklex AI Agent Framework. Additionally, I would like to know how to effectively implement and manage the slots for collecting user information during a conversation.",
+    "I want to ask the chatbot how it measures the user's goal completion rate and what specific strategies it uses to improve this metric.",
+    "I want to understand how to configure the user simulator parameters effectively to evaluate the chatbot's performance, specifically how to set the number of conversations, goals, and maximum turns for optimal results.",
+    "I would like to ask the chatbot how to get started with implementing the Arklex AI Agent Framework in my projects, specifically what resources or documentation are available for developers."
+]
