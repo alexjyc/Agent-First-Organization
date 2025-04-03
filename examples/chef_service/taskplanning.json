@@ -1,0 +1,53 @@
+[
+    {
+        "task_name": "Analyze user preferences and dietary restrictions",
+        "steps": [
+            "Ask the user about their dietary restrictions or preferences (e.g., vegetarian, vegan, gluten-free, allergies).",
+            "Inquire about specific ingredients the user would like to include or avoid in their recipes.",
+            "Request information about the user's cuisine preferences or favorite dishes to tailor the recipe suggestions.",
+            "Confirm the information gathered and summarize the user's preferences and restrictions to ensure accuracy.",
+            "Provide tailored recipe suggestions based on the user's preferences and ingredients, and ask if they would like to explore more options."
+        ]
+    },
+    {
+        "task_name": "Retrieve recipes based on user preferences and dietary restrictions",
+        "steps": [
+            "Inquire about the user's dietary restrictions and preferences, as well as the ingredients they have available.",
+            "Use the provided information to search for recipes that match the user's preferences and available ingredients.",
+            "Present the user with a selection of recipes that fit their criteria and ask for their feedback.",
+            "Confirm if the user would like more details on a specific recipe or if they want to see additional options.",
+            "Provide instructions on how to prepare the chosen recipe or assist with any further questions the user may have."
+        ]
+    },
+    {
+        "task_name": "Provide recipe-following guides with criteria",
+        "steps": [
+            "Inquire about the ingredients the user has available and any dietary restrictions or preferences they may have.",
+            "Search for recipes that match the provided ingredients and align with the user's dietary restrictions or preferences.",
+            "Present a selection of recipes to the user and ask if they would like to see more options or have specific adjustments.",
+            "Confirm which recipe the user is interested in and provide detailed cooking instructions and any additional tips.",
+            "Ask if the user needs assistance with any other recipes or further cooking guidance."
+        ]
+    },
+    {
+        "task_name": "Provide relevant recommendation",
+        "steps": [
+            "Ask the user for the ingredients they have available and any specific dietary restrictions or preferences.",
+            "Use the RecipesWorker to find recipes that match the user's available ingredients and dietary preferences.",
+            "Present the user with a selection of recipes that fit their criteria, including brief descriptions.",
+            "Inquire if the user would like to see more options or if they have any additional dietary restrictions to consider.",
+            "Confirm if the user is satisfied with the recommendations or if they need further assistance in choosing a recipe.",
+            "Provide the user with detailed instructions for the selected recipe or offer to assist with any additional questions."
+        ]
+    },
+    {
+        "task_name": "Recipe Follow-Up Q&A",
+        "steps": [
+            "Ask the user if they have any specific questions or need clarifications about the recipes provided.",
+            "Utilize the RecipesWorker to find and provide detailed answers to the user's questions about the recipes, such as cooking methods, ingredient substitutions, or serving suggestions.",
+            "Inquire if the user has any dietary restrictions or preferences that were not previously mentioned.",
+            "Based on the user's input, offer additional recipe suggestions or modifications to existing recipes to better suit their preferences.",
+            "Confirm if the user needs any further assistance, such as more recipes or guidance on preparing the dishes."
+        ]
+    }
+]

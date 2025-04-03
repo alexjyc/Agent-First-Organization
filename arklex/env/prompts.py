@@ -99,6 +99,25 @@ The response must be the name of one of the workers ({workers_name}).
 Answer:
 """,
 
+### ================================== Recipes Prompts ================================== ###
+"user_pref_prompt": """Your role is to carefully analyze conversation history between a user and a recipe recommendation chatbot to extract the user's food preferences and available ingredients.
+
+{chat_history}
+
+Based on the above conversation, please extract and summarize:
+
+1. The user's food preferences - including cuisine preferences, dietary restrictions, cooking method preferences, flavor preferences, and any specific dishes mentioned positively.
+
+2. The user's current available ingredients - focus on ingredients the user explicitly mentions having available. Do not include ingredients they mention not having.
+
+Return your analysis in the following JSON format:
+```
+{{
+    "preference": <the user's preference on food>,
+    "ingredients": <the current ingredients>
+}}
+```
+""",
 
 ### ================================== Database-related Prompts ================================== ###
 "database_action_prompt": """You are an assistant that has access to the following set of actions. Here are the names and descriptions for each action:
@@ -221,8 +240,13 @@ Answer:
 "database_slot_prompt": """用户为这个slot：{slot}提供了一个值。该值为{value}。
 如果提供的值与以下任何一个值匹配：{value_list}（它们可能不完全相同，你可以重新构造值），请提供重新构造后的值。否则，回复None。
 你的回复应该只是重新构造后的值或None。
-"""
+""",
+
 }
         else:
                 raise ValueError(f"Language {bot_config.language} is not supported")  
         return prompts
+
+
+
+

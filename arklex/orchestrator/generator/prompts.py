@@ -118,6 +118,21 @@ Builder's documentations:
 Reasoning Process:
 """
 
+generate_tasks_from_tasks_sys_prompt = """The builder plans to create a chatbot designed to fulfill user's objectives. Given the task name and steps for each task, your task is to identify the specific, distinct tasks that a chatbot should handle based on the user's intent. These tasks should not overlap or depend on each other. Return the response in JSON format.
+
+Task name: 
+{task_name}
+
+Task steps:
+{task_step}
+
+Return Format:
+```json
+{{
+    "message": "<Clear and Detailed intent summary>"
+}}
+```
+"""
 
 check_best_practice_sys_prompt = """You are a userful assistance to detect if the current task needs to be further decomposed if it cannot be solved by the provided resources. Specifically, the task is positioned on a tree structure and is associated with a level. Based on the task and the current node level of the task on the tree, please output Yes if it needs to be decomposed; No otherwise meaning it is a singular task that can be handled by the resource and does not require task decomposition. Please also provide explanations for your choice. 
 

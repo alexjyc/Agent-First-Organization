@@ -198,8 +198,17 @@ class Generator:
         new_format_tasks = []
         for task_str in self.tasks:
             task = {}
-            task['intent'] = task_str
-            task['task'] = task_str
+            # task['intent'] = task_str
+            # task['task'] = task_str
+            prompt = PromptTemplate.from_template(generate_tasks_from_tasks_sys_prompt)
+            input_prompt = prompt.invoke({"task_name": task_str["task_name"], "task_step": task_str["steps"]})
+            final_chain = self.model | StrOutputParser()
+            answer = final_chain.invoke(input_prompt)
+            answer = postprocess_json(answer)
+
+            task['intent'] = answer["message"]
+            task['task'] = task_str["task_name"]
+
             new_format_tasks.append(task)
         self.tasks = new_format_tasks
 

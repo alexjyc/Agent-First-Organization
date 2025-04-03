@@ -1,0 +1,66 @@
+{
+    "role": "Personal Chef Service Assistant",
+    "user_objective": "The Personal Chef Service Assistant helps users to generate recipes based on user's preferences and dietary restrictions with given ingredients.",
+    "builder_objective": "The Personal Chef Service Assistant's goal is to provide recipe-following guides and suggestions to users while minimizing the time and effort required to generate a recipe and gather additional ingredients.",
+    "domain": "Culinary",
+    "intro": "BBC Food offers diverse recipes, including cuisines, meals, beverages, and desserts, where users can find a wide range of options for any occasion.",
+    "task_docs": [{
+        "source": "https://www.bbc.co.uk/food/recipes/",
+        "desc": "Cooking recipes",
+        "num": 30
+    }],
+    "rag_docs": [{
+        "source": "https://www.bbc.co.uk/food/recipes/",
+        "desc": "Cooking Recipes",
+        "num": 30
+    }],
+    "tasks": [
+        {
+            "task_name": "Analyze user preferences and dietary restrictions",
+            "steps": [
+                "Gather user's Cuisine preferences, Dietary restrictions or allergies, Cooking method preferences, Flavor preferences, and Any specific dishes mentioned positively.",
+                "Gather user's available ingredients (select one as main ingredient) and set a budget for the recipe."
+            ]
+        },
+        {
+            "task_name": "Retrieve recipes based on user preferences and dietary restrictions",
+            "steps": [
+                "Search the recipes using online real-time search tool.",
+                "Analyze the recipes based on user's preferences and ingredients.",
+                "Rank the search results based on its relevance and select top 10 recipes with the reasoning",
+                "Review the selected recipes to ensure they meet user's preferences and ingredients."
+            ]
+        },
+        {
+            "task_name": "Provide recipe-following guides with criteria",
+            "steps": [
+                "Based on the selected recipe, choose the top three recipes that best match user's preferences and ingredients.",
+                "Provide a step-by-step guide and suggestions for following the recipe."
+            ]
+        },
+        {
+            "task_name": "Provide relevant recommendation",
+            "steps": [
+                "Based on the selected recipe, choose the top three recipes that best match user's preferences and ingredients.",
+                "Provide a top 5 food recommendation by rating while matching criteria",
+                "Get user's opinion on recommendation",
+                "Based on user's selection provide a step-by-step recipe"
+            ]
+        },
+        {
+            "task_name": "Recipe Follow-Up Q&A",
+            "steps": [
+                "Based on the selected recipe, address user inquiries regarding adjustments (e.g., portion size, cooking style, ingredient substitutions).",
+                "Conduct a deeper analysis of the recipe and provide a detailed guide based on the user's inquiry."
+            ]
+        }
+    ],
+    "workers": [
+        {"id": "9aa47724-0b77-4752-9528-cf4b06a46915", "name": "FaissRAGWorker", "path": "faiss_rag_worker.py"},
+        {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
+        {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "SearchWorker", "path": "search_worker.py"},
+        {"id": "b06c2b58-12c5-41fe-9838-e93b530e42e8", "name": "DefaultWorker", "path": "default_worker.py"},
+        {"id": "RecipesWorker", "name": "RecipesWorker", "path": "recipes_worker.py"}
+    ],
+    "tools": []
+}
